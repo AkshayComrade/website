@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
 	<title>Gym Website Template</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,18 +10,18 @@
       visibility: hidden;
     }
   </style>
-  
+
 </head>
 <body>
- 
+
  <!-- Start Header  -->
  <header>
  	 <div class="container">
  	 	<div class="logo">
- 	 		 <a href="">Chandus Fitness <span>Club</span></a>
+ 	 		 <a href="">Chandus  <span>gym</span></a>
  	 	</div>
  	 	<a href="javascript:void(0)" class="ham-burger">
- 	       <span></span>	
+ 	       <span></span>
  	       <span></span>
  	 	</a>
  	 	<div class="nav">
@@ -42,7 +42,7 @@
   <!-- Start Home -->
   <section class="home wow flash" id="home">
   	 <div class="container">
-  	 	  <h1 class="wow slideInLeft" data-wow-delay="1s">It's <span>gym</span> time. Let's go</h1>
+  	 	  <h1 class="wow slideInLeft" data-wow-delay="1s">Welcome <span>to</span> Chandus gym</h1>
   	 	  <h1 class="wow slideInRight" data-wow-delay="1s">We are ready to <span>fit you</span></h1>
   	 </div>
   	  <!-- go down -->
@@ -344,14 +344,78 @@
      <div class="container">
         <div class="content">
             <div class="box form wow slideInLeft">
-               <form>
-                  <input type="text" placeholder="Enter Name">
-                  <input type="text" placeholder="Enter Email">
-                  <input type="text" placeholder="Enter Mobile">
-                  <textarea placeholder="Enter Message"></textarea>
-                  <button type="submit">Send Message</button>
-               </form>
-            </div>
+				<h1>Complete Registration</h1>
+				<form id="mainForm" action="process.php" method="POST" onsubmit="return validateForm()">
+					<!-- Name -->
+					<label for="name">Name:</label>
+					<input type="text" id="name" name="name" placeholder="Enter Name" required>
+
+					<!-- Email -->
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" placeholder="Enter your email" required>
+					<span id="errorEmail" class="error"></span>
+
+					<!-- Mobile -->
+					<label for="mobile">Mobile Number:</label>
+					<input type="text" id="mobile" name="mobile" placeholder="+91 XXXXXXXXXX" required>
+					<span id="errorMobile" class="error"></span>
+
+					<!-- Offers -->
+					<form action="process.php" method="POST">
+
+
+						<label>Select Offer:</label>
+						<select id="offers" name="amount" required>
+							<option value="" selected disabled>--- Select an Offer ---</option>
+							<option value="2000">1 Month - 2000</option>
+							<option value="4000">2 Months - 4000</option>
+							<option value="6000">3 Months - 6000</option>
+							<option value="4000">4 Months - 4000 (Special Offer)</option>
+							<option value="6000">6 Months - 6000 (Special Offer)</option>
+							<option value="14000">7 Months - 14000</option>
+							<option value="16000">8 Months - 16000</option>
+							<option value="18000">9 Months - 18000</option>
+							<option value="20000">10 Months - 20000</option>
+							<option value="22000">11 Months - 22000</option>
+							<option value="8000">12 Months - 8000 (Special Offer)</option>
+						</select>
+
+
+					<!-- Submit Button -->
+					<button type="submit">Submit</button>
+				</form>
+
+				<script>
+					function validateForm() {
+						const emailInput = document.getElementById('email');
+						const mobileInput = document.getElementById('mobile');
+						const errorEmail = document.getElementById('errorEmail');
+						const errorMobile = document.getElementById('errorMobile');
+
+						let isValid = true;
+
+						// Email Validation
+						const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+						if (!emailPattern.test(emailInput.value)) {
+							errorEmail.textContent = "Please enter a valid email address.";
+							isValid = false;
+						} else {
+							errorEmail.textContent = "";
+						}
+
+						// Mobile Number Validation (Must start with +91 and have 10 digits after it)
+						const mobilePattern = /^\+91[6-9]\d{9}$/;
+						if (!mobilePattern.test(mobileInput.value)) {
+							errorMobile.textContent = "Enter a valid 10-digit mobile number with +91.";
+							isValid = false;
+						} else {
+							errorMobile.textContent = "";
+						}
+
+						return isValid; // Prevents form submission if any validation fails
+					}
+				</script>
+			</div>
             <div class="box text wow slideInRight">
                  <h2>Welcome to chandus gym Tenali </h2>
 
@@ -362,15 +426,15 @@
                           <li><span class="fa fa-envelope"></span> abcchandu@gmail.com</li>
                       </ul>
                   </div>
-                  <div class="social">
-                       <a href=""><span class="fa fa-facebook"></span></a>
-                       <a href=""><span class="fa fa-linkedin"></span></a>
-                       <a href=""><span class="fa fa-skype"></span></a>
-                       <a href=""><span class="fa fa-youtube-play"></span></a>
-                  </div>
+				<div class="social">
+					<a href="https://www.instagram.com/" target="_blank"><span class="fa fa-instagram"></span></a>
+					<a href="https://www.facebook.com/" target="_blank"><span class="fa fa-facebook"></span></a>
+					<a href="https://www.youtube.com/" target="_blank"><span class="fa fa-youtube-play"></span></a>
+				</div>
 
-                  <div class="copy">
-                      PowerBy &copy; Ali Ahmad
+
+				<div class="copy">
+                      PowerBy &copy; Akshay Duggirala
                   </div>
             </div>
         </div>
@@ -383,55 +447,55 @@
  <!-- jquery -->
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-	$(document).ready(function(){
+ <script>
+     $(document).ready(function(){
 
-      $(".ham-burger, .nav ul li a").click(function(){
-       
-        $(".nav").toggleClass("open")
+         $(".ham-burger, .nav ul li a").click(function(){
 
-        $(".ham-burger").toggleClass("active");
-      })      
-      $(".accordian-container").click(function(){
-      	$(".accordian-container").children(".body").slideUp();
-      	$(".accordian-container").removeClass("active")
-      	$(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
-      	$(this).children(".body").slideDown();
-      	$(this).addClass("active")
-      	$(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
-      })
+             $(".nav").toggleClass("open")
 
-       $(".nav ul li a, .go-down").click(function(event){
-         if(this.hash !== ""){
+             $(".ham-burger").toggleClass("active");
+         })
+         $(".accordian-container").click(function(){
+             $(".accordian-container").children(".body").slideUp();
+             $(".accordian-container").removeClass("active")
+             $(".accordian-container").children(".head").children("span").removeClass("fa-angle-down").addClass("fa-angle-up")
+             $(this).children(".body").slideDown();
+             $(this).addClass("active")
+             $(this).children(".head").children("span").removeClass("fa-angle-up").addClass("fa-angle-down")
+         })
 
-              event.preventDefault();
+         $(".nav ul li a, .go-down").click(function(event){
+             if(this.hash !== ""){
 
-              var hash=this.hash; 
+                 event.preventDefault();
 
-              $('html,body').animate({
-                scrollTop:$(hash).offset().top
-              },800 , function(){
-                 window.location.hash=hash;
-              });
+                 var hash=this.hash;
 
-              // add active class in navigation
-              $(".nav ul li a").removeClass("active")
-              $(this).addClass("active")
+                 $('html,body').animate({
+                     scrollTop:$(hash).offset().top
+                 },800 , function(){
+                     window.location.hash=hash;
+                 });
+
+                 // add active class in navigation
+                 $(".nav ul li a").removeClass("active")
+                 $(this).addClass("active")
+             }
+         })
+     })
+
+ </script>
+ <script src="js/wow.min.js"></script>
+ <script>
+     wow = new WOW(
+         {
+             animateClass: 'animated',
+             offset:       0,
          }
-      })
-})
-
-</script>
-<script src="js/wow.min.js"></script>
-<script>
-    wow = new WOW(
-      {
-        animateClass: 'animated',
-        offset:       0,
-      }
-    );
-    wow.init();
-  </script>
+     );
+     wow.init();
+ </script>
 </body>
 </html>
 

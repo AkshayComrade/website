@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap');
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: rgba(255, 255, 255, 0.29); /* Changed background to black */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Header */
+header {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 255, 0.32); /* Changed header background to blue */
+    padding: 15px 15px;
+}
+
+header .container {
+    -webkit-display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo a {
+    font-size: 30px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+header .nav {
+    position: fixed;
+    background-color: rgba(0, 0, 255, 0.32); /* Changed navigation menu background to blue */
+    width: 280px;
+    top: 0;
+    right: 0;
+    height: 100%;
+    z-index: 99;
+    padding: 100px 0px 15px;
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -webkit-transition: transform .5s ease;
+    transition: transform .5s ease;
+}
+
+header .nav.open {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+header .ham-burger span {
+    height: 3px;
+    margin-bottom: 8px;
+    display: block;
+    background-color: blue; /* Changed toggle color to blue */
+    width: 30px;
+    -webkit-transition: transform .5s ease;
+    transition: transform .5s ease;
+}
+
+/* Buttons */
+.service .content .text .btn,
+.start-today .content .text .btn,
+.price-package .content .box .inner .text .btn,
+.contact .content .form button {
+    padding: 8px 30px;
+    background-color: blue !important; /* Changed button color to blue */
+    color: white !important;
+    text-decoration: none;
+    display: inline-block;
+    border: 1px solid transparent;
+    cursor: pointer;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+
+.service .content .text .btn:hover,
+.start-today .content .text .btn:hover,
+.price-package .content .box .inner .text .btn:hover,
+.contact .content .form button:hover {
+    background-color: transparent !important;
+    border-color: blue !important;
+    color: blue !important;
+}
+
+/* Sections */
+.about,
+.service,
+.classes,
+.start-today,
+.schedule,
+.gallery,
+.price-package,
+.contact {
+    background-color: #d80000 !important; /* Ensuring all sections have black background */
+}
+
+/* Text Colors */
+.about .content .box .inner .text p,
+.service .content .text p,
+.classes .content .text p,
+.start-today .content .text p,
+.schedule .content .text p,
+.price-package .title-p,
+.contact .content .text p {
+    color: white !important;
+}
+
+/* Footer */
+.contact {
+    background-color: #f40909 !important;
+}

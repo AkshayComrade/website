@@ -23,7 +23,7 @@ header{
 	top:0px;
 	width: 100%;
 	z-index: 10;
-	background-color: #000000;
+	background-color: rgba(19, 106, 193, 0.32);
 	padding:15px 15px;
 }
 header .container{
@@ -40,17 +40,17 @@ header .logo a{
 	font-weight: 700;
 }
 header .logo a span{
-	color: rgba(160, 100, 106, 0.79);
+	color: rgba(177, 2, 20, 0.79);
 }
 header .nav{
 	position: fixed;
-	background-color: #136ac1;
+	background-color: rgba(19, 106, 193, 0.32);
 	width: 280px;
 	top:0;
 	right:0;
 	height: 100%;
 	z-index: 99;
-	padding:100px 0px 15px; 
+	padding:100px 0px 15px;
 	-webkit-transform: translateX(100%);
 	transform: translateX(100%);
 	-webkit-transition: transform .5s ease;
@@ -192,7 +192,7 @@ header .ham-burger.active span:nth-child(2){
 }
 
 .home h1 span{
-	color: #136ac1;;
+	color: #ffffff;;
 }
 
 
@@ -203,7 +203,7 @@ header .ham-burger.active span:nth-child(2){
 	background-color:#ffffff;
 }
 
-.about .content{ 
+.about .content{
  -webkit-display: flex;
  display: flex;
 }
@@ -247,7 +247,7 @@ header .ham-burger.active span:nth-child(2){
 /*Service Section*/
 .service{
 	padding:80px 0px;
-	background-color: #136ac1;
+	background-color: rgba(193, 170, 19, 0.65);
 }
 
 .service .content{
@@ -280,7 +280,7 @@ header .ham-burger.active span:nth-child(2){
 .service .content .text .btn{
 	padding:8px 30px;
 	background-color: #222222;
-	color:#ffffff;
+	color: #ffffff;
 	text-decoration: none;
 	display: inline-block;
 	border:1px solid transparent;
@@ -290,8 +290,8 @@ header .ham-burger.active span:nth-child(2){
 }
 
 .service .content .text .btn:hover{
-	border:1px solid #ffffff;
-	color:#ffffff;
+	border:1px solid rgba(190, 197, 204, 0.4);
+	color: rgba(153, 167, 179, 0.37);
 	background-color: transparent;
 }
 .service .content .accordian-container{
@@ -307,12 +307,12 @@ header .ham-burger.active span:nth-child(2){
 	position: absolute;
 	right: 10px;
 	top:13px;
-	color:#ffffff;
+	color: rgba(193, 199, 205, 0.4);
 	height:30px;
 	width: 30px;
 	text-align: center;
 	line-height: 30px;
-	color:#ffffff;
+	color: #607487;
 	border-radius: 50%;
 }
 .service .content .accordian-container .head h4{
@@ -324,7 +324,7 @@ header .ham-burger.active span:nth-child(2){
   text-transform: capitalize;
 }
 .service .content .accordian-container.active .head{
-  background-color: #222222;	
+  background-color: #222222;
 }
 .service .content .accordian-container .body{
 	display: none;
@@ -342,7 +342,7 @@ header .ham-burger.active span:nth-child(2){
 	color:#ffffff;
 	margin:0;
 	padding:0;
-	font-family: 'Open Sans', sans-serif;	
+	font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -395,7 +395,7 @@ header .ham-burger.active span:nth-child(2){
  background-color: #222222;
 }
 .classes .content .class-items .item:nth-child(2){
- background-color: #1344c1;
+ background-color: #ffffff;
 }
 .classes .content .class-items .item .item-text{
 	padding: 15px;
@@ -419,13 +419,13 @@ header .ham-burger.active span:nth-child(2){
 	height: 50px;
 	width: 60px;
 	font-size:20px;
-	font-weight: 500; 
+	font-weight: 500;
 	color:#ffffff;
 	text-align: center;
 	line-height: 50px;
 }
 .classes .content .class-items .item:nth-child(1) .item-img .price{
- background-color: #133cc1;
+ background-color: rgba(190, 197, 204, 0.4);
  left:0;
  top:0;
 }
@@ -506,7 +506,7 @@ header .ham-burger.active span:nth-child(2){
 
 .start-today .content .text .btn{
 	padding: 8px 30px;
-    background-color: #1344c1;
+    background-color: rgba(190, 197, 204, 0.4);
     color: #ffffff;
     text-decoration: none;
     display: inline-block;
@@ -581,7 +581,7 @@ header .ham-burger.active span:nth-child(2){
 	background-color: #444444;
 }
 .schedule .content .timing .table tr:nth-child(1) td.day{
-	background-color: #134ac1;
+	background-color: rgba(190, 197, 204, 0.4);
 }
 .schedule .content .timing .table tr td.day{
 	color:#ffffff;
@@ -599,7 +599,7 @@ header .ham-burger.active span:nth-child(2){
 
 .gallery .content .box{
 	flex:0 0 50%;
-	max-width: 50%;	
+	max-width: 50%;
 }
 .gallery .content .box img{
 	display: block;
@@ -662,7 +662,7 @@ header .ham-burger.active span:nth-child(2){
 .price-package .content .box .inner .price-tag{
 	padding: 15px;
 	font-size: 20px;
-	background-color: #1344c1;
+	background-color: rgba(190, 197, 204, 0.4);
 	color:#ffffff;
 	text-align: center;
 	font-weight: 700;
@@ -685,11 +685,11 @@ header .ham-burger.active span:nth-child(2){
  margin:0;
  text-align: center;
  padding:0 0 5px;
- font-family: 'Open-sans', sans-serif;	
+ font-family: 'Open-sans', sans-serif;
 }
 .price-package .content .box .inner .text .btn{
     padding: 8px 30px;
-    background-color: #136ac1;
+    background-color: rgba(190, 197, 204, 0.4);
     color: #ffffff;
     text-decoration: none;
     display: inline-block;
@@ -714,7 +714,7 @@ header .ham-burger.active span:nth-child(2){
 
 .contact{
 	padding:80px 0px;
-	background-color: #222222;
+	background-color: rgb(43, 45, 48);
 }
 
 .contact .content{
@@ -758,7 +758,7 @@ header .ham-burger.active span:nth-child(2){
 	height: 45px;
 	padding:0px 50px;
 	border:1px solid transparent;
-	background-color: #135ec1;
+	background-color: rgb(255, 255, 255);
 	color:#ffffff;
 	font-size: 15px;
 	transition: all .5s ease;
@@ -766,14 +766,14 @@ header .ham-burger.active span:nth-child(2){
 }
 .contact .content .form button:hover{
 	background-color:transparent;
-	color:#ffffff; 
+	color:#ffffff;
     border-color:#ffffff;
 }
 
 .contact .content .text h2{
 	font-size: 30px;
     font-weight: 500;
-    color: #1330c1;
+    color: rgb(0, 0, 0);
     padding: 0px 0px 20px;
 }
 .contact .content .text p{
@@ -807,7 +807,7 @@ header .ham-burger.active span:nth-child(2){
 	left:0px;
 	top:0px;
 	font-size: 20px;
-	color: #132ac1;
+	color: #000000;
 }
 .contact .content .text .social {
 	padding-top: 30px;
@@ -817,13 +817,13 @@ header .ham-burger.active span:nth-child(2){
 	width: 40px;
 	line-height: 40px;
 	text-align: center;
-	background-color: #1344c1;
-    text-decoration: none;	
+	background-color: #1c1c16;
+    text-decoration: none;
     display: inline-block;
     margin-right: 10px;
     transition: all .5s ease;
     border:1px solid transparent;
-} 
+}
 
 .contact .content .text .social a:hover{
 	background-color: transparent;
@@ -836,7 +836,7 @@ header .ham-burger.active span:nth-child(2){
 }
 
 .contact .content .text .copy{
-	border-top:1px solid #714f4f;
+	border-top:1px solid #2883da;
 	margin-top: 30px;
 	padding-top: 20px;
 	color:#c5c5c5;
@@ -890,7 +890,7 @@ header .ham-burger.active span:nth-child(2){
 .classes .content .class-items .item{
 	flex-wrap: wrap;
 }
-.classes .content .class-items .item .item-text, 
+.classes .content .class-items .item .item-text,
 .classes .content .class-items .item .item-img {
     flex: 0 0 100%;
     max-width: 100%;
@@ -900,7 +900,7 @@ header .ham-burger.active span:nth-child(2){
 }
 .schedule .content .box{
 flex: 0 0 100%;
-    max-width: 100%;	
+    max-width: 100%;
 }
 .start-today .content{
 	flex-wrap: wrap;
